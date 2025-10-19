@@ -11,6 +11,9 @@ gun beats snake
 import random
 import time
 
+BOLD = "\033[1m"
+END = "\033[0m"
+
 def game(comp,user):
     win_conditions=[(0,1),(-1,0),(1,-1)]
 
@@ -22,14 +25,15 @@ def game(comp,user):
     print()  # newline
     
     if(comp==user):
-        print("its a tie!")
+        print(BOLD + "\nits a tie!\n" + END)
 
     elif((comp,user) in win_conditions ):
-        print("\nYou won! 🎉\n")
+        print(BOLD + "\nYou won! 🎉\n" + END)
     
     else:
-        print("\nYOU LOST IT\n")
+        print(BOLD + "\nYOU LOST IT\n" + END)
     
+
 
 dict={"s":1, "w": 0, "g":-1}
 
